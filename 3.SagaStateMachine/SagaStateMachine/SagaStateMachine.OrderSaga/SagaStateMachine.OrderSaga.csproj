@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>dotnet-SagaStateMachine.OrderSaga-9B7AB02E-19F9-44D7-8A70-8A4A8708AE95</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit.AspNetCore" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.2.3" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+        <PackageReference Include="MassTransit.Azure.Cosmos" Version="7.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SagaStateMachine.Messages\SagaStateMachine.Messages.csproj" />
+    </ItemGroup>
+</Project>

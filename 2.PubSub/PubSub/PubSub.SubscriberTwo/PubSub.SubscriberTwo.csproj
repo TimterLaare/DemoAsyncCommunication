@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>dotnet-PubSub.SubscriberTwo-FE902ED2-D6B7-4828-8B55-6FF753C29C43</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit.AspNetCore" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.2.3" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PubSub.Messages\PubSub.Messages.csproj" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendReceive.Client", "SendReceive.Client\SendReceive.Client.csproj", "{81EFF2C6-91D5-4811-98A7-6D581832B82B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendReceive.Messages", "SendReceive.Messages\SendReceive.Messages.csproj", "{61C996BD-9A2E-4D9D-A35C-EE527EF70060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendReceive.WorkerService", "SendReceive.WorkerService\SendReceive.WorkerService.csproj", "{D53DBBF8-2946-4B72-8DF3-7C0A200D4937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81EFF2C6-91D5-4811-98A7-6D581832B82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EFF2C6-91D5-4811-98A7-6D581832B82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EFF2C6-91D5-4811-98A7-6D581832B82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EFF2C6-91D5-4811-98A7-6D581832B82B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C996BD-9A2E-4D9D-A35C-EE527EF70060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C996BD-9A2E-4D9D-A35C-EE527EF70060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C996BD-9A2E-4D9D-A35C-EE527EF70060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C996BD-9A2E-4D9D-A35C-EE527EF70060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53DBBF8-2946-4B72-8DF3-7C0A200D4937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53DBBF8-2946-4B72-8DF3-7C0A200D4937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53DBBF8-2946-4B72-8DF3-7C0A200D4937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53DBBF8-2946-4B72-8DF3-7C0A200D4937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

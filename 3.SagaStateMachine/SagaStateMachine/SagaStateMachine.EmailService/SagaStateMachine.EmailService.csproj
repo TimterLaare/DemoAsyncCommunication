@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>dotnet-SagaStateMachine.EmailService-9433574B-F69C-4295-BFCF-95CC00C0820D</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit.AspNetCore" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.2.3" />
+        <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.2.3" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SagaStateMachine.Messages\SagaStateMachine.Messages.csproj" />
+    </ItemGroup>
+</Project>

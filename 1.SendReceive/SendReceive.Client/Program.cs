@@ -1,5 +1,4 @@
-﻿using MassTransit;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using SendReceive.Messages;
 using System;
 using System.IO;
@@ -13,30 +12,18 @@ namespace SendReceive.Client
 
         static async Task Main(string[] args)
         {
-            var bus = Bus.Factory.CreateUsingAzureServiceBus(c => { c.Host(AzureServiceBusConnectionString); });
-
-            EndpointConvention.Map<TextMessage>(new Uri("queue:text-message"));
-
-            await bus.StartAsync();
-            try
+            while (true)
             {
-                while (true)
-                {
-                    Console.WriteLine("Type the text you want to send. Type nothing and press enter to quit");
-                    var input = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(input)) break;
+                Console.WriteLine("Type the text you want to send. Type nothing and press enter to quit");
+                var input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input)) break;
 
-                    var message = new TextMessage(input);
-                    await bus.Send(message);
-                    Console.WriteLine("Text Message sent!");
-                }
-            }
-            finally
-            {
-                await bus.StopAsync();
+                var message = new TextMessage(input);
+                //todo send text message to queue
+                Console.WriteLine("Text Message sent!");
             }
         }
-        
+
         private static string GetAzureServiceBusConnectionString() =>
             new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

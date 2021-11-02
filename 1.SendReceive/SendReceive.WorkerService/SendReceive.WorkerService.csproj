@@ -6,13 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MassTransit.AspNetCore" Version="7.2.3"/>
-        <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.2.3"/>
-        <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.2.3"/>
-        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SendReceive.Messages\SendReceive.Messages.csproj"/>
+        <ProjectReference Include="..\SendReceive.Messages\SendReceive.Messages.csproj" />
     </ItemGroup>
 </Project>

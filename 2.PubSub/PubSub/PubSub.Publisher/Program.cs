@@ -28,13 +28,13 @@ q) Quit");
                     {
                         case 'a':
                             var textMessage = new TextMessage("Hello world!");
-                            await bus.Publish(textMessage);
+                            //todo publish text message
                             Console.WriteLine("Sent text message!");
                             break;
 
                         case 'b':
                             var dateTimeMessage = new DateTimeMessage(DateTime.Now);
-                            await bus.Publish(dateTimeMessage);
+                            //todo publish date tune message
                             Console.WriteLine("Sent date time message!");
                             break;
                         case 'q':

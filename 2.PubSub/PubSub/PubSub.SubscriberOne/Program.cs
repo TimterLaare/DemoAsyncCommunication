@@ -18,20 +18,17 @@ namespace PubSub.SubscriberOne
                 {
                     var azureServiceBusConnectionString = hostContext.Configuration.GetConnectionString("AzureServiceBus");
 
-                    services.AddHostedService<Worker>();
-
                     services.AddMassTransit(m =>
                     {
-                        m.AddConsumersFromNamespaceContaining<Worker>();
-                        m.SetKebabCaseEndpointNameFormatter();
                         m.UsingAzureServiceBus((context, config) =>
                         {
                             config.Host(azureServiceBusConnectionString);
-                            config.ConfigureEndpoints(context);
                         });
                     });
                         
                     services.AddMassTransitHostedService(waitUntilStarted: true);
+                    
+                    services.AddHostedService<Worker>();
                 });
     }
 }
